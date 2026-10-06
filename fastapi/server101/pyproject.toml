@@ -1,0 +1,12 @@
+[project]
+name = "server101"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard,standart]>=0.141.1",
+]
+
+[tool.fastapi]
+entrypoint = "server101.main:app"

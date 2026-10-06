@@ -1,0 +1,219 @@
+.todos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--martel-sans);
+  font-weight: 600;
+  padding: 50px 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.heading {
+  color: var(--primary);
+  font-size: 80px;
+  font-family: var(--bungee);
+}
+
+h6 {
+  font-size: 30px;
+}
+
+.form {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.form input {
+  border: none;
+  padding: 10px;
+  outline: none;
+  flex: 1;
+  font-size: 30px;
+  font-family: var(--martel-sans);
+  width: 100%;
+
+  @media screen and (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+.form button {
+  background-color: var(--accent-foreground);
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 80px;
+  font-size: 30px;
+  border-left: 2px solid black;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.todos_container {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (max-width: 600px) {
+    padding: 10px;
+    gap: 10px;
+  }
+}
+
+.todo_item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.todo_item input,
+svg {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.todo_item .checkbox {
+  appearance: none;
+  border: 2px solid gray;
+  border-radius: 50%;
+}
+
+.todo_item .checkbox:checked {
+  background-color: gray;
+}
+
+.todo_item:has(.checkbox:not(:checked):hover) {
+  background-color: var(--success-foreground);
+}
+
+.todo_item .trash:hover {
+  color: var(--accent);
+}
+
+.todo_item:has(.trash:hover) {
+  background-color: var(--accent-foreground);
+}
+
+.todo_item:has(.checkbox:checked) {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todo_item p {
+  flex: 1;
+  font-size: 30px;
+  padding-top: 5px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 15px;
+  }
+}
+
+.tips {
+  font-size: 20px;
+  color: gray;
+  font-family: unset;
+}
+
+.todos-loading {
+  text-align: center;
+  font-size: 2rem;
+  font-family: var(--bungee);
+}
+
+.duplicate {
+  position: absolute;
+  top: 5px;
+  right: -10px;
+
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+  background-color: var(--primary-foreground);
+  padding: 2px;
+
+  display: none;
+  border-radius: 50%;
+}
+
+.todo_item:hover .duplicate {
+  display: block;
+}
+
+.edit {
+  position: absolute;
+  top: 30px;
+  right: -10px;
+
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+  background-color: var(--primary-foreground);
+  padding: 2px;
+
+  display: none;
+}
+
+.todo_item:hover .edit {
+  display: block;
+}
+
+.trash {
+  position: absolute;
+  top: 55px;
+  right: -10px;
+
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+  background-color: var(--primary-foreground);
+  padding: 2px;
+  border-radius:10px;  
+  display: none;
+}
+
+.todo_item:hover .trash {
+  display: block;
+}
+
+.edit_input {
+  width: 100% !important;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  font-family: var(--martel-sans);
+  padding: 10px;
+  height: 60px !important;
+  border-radius: 8px;
+  padding-left: 32px;
+  padding-top: 15px;
+  font-weight: 600;
+}

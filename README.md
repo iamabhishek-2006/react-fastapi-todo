@@ -35,7 +35,7 @@ A modern, lightning-fast Full-Stack Todo application built with **React (TypeScr
 
 ## 📁 Project Structure
 
-text
+```text
 todos/
 ├── client/              # React + TypeScript Frontend
 │   ├── src/
